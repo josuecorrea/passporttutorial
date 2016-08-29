@@ -7,7 +7,7 @@ var expressValidator = require('express-validator');
 var flash = require('connect-flash');
 var session = require('express-session');
 var passport = require('passport');
-var localStrategy = requirecc('passport-local'),Strategy;
+var localStrategy =require('passport-local'),Strategy;
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/loginapp');
@@ -28,7 +28,7 @@ app.use(bodyParser.urlencoded({ extended: false}));
 app.use(cookieParser());
 
 //set static folder
-app.use(express.static(path.join(___dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 //Express session
 app.use(session({
